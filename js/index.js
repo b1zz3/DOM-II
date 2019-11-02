@@ -63,3 +63,10 @@ subHead4.forEach(sub => {
         sub.style.transform = "rotateZ(360deg)";
     })
 })
+
+const btns = document.querySelectorAll(".btn");
+btns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.style.color = "black";
+    })
+})
