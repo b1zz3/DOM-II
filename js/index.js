@@ -20,13 +20,11 @@ body.addEventListener("keydown", () => {
 window.addEventListener("wheel", () => {
     console.log("It works");
     body.style.backgroundColor = "orange";
-    // mseWhl.style.cursor = "not-allowed"; not working
 })
 
 const pics = document.querySelectorAll("img");
 pics.forEach(pic => {
     pic.addEventListener('mouseenter', () => {
-        // pic.style.transform = "scale(1.2)";
         pic.style.transform = "rotateY(180deg)";
         pic.style.transition = "all 0.3s";
     })
@@ -34,7 +32,6 @@ pics.forEach(pic => {
 
 pics.forEach(pic => {
     pic.addEventListener('mouseleave', () => {
-        // pic.style.transform = "scale(1)";
         pic.style.transition = "all 0.3s";
         pic.style.transform = "rotateY(360deg)";
     })
@@ -46,6 +43,11 @@ links.forEach(link => {
         link.style.transition = "all 0.3s";
         link.style.transform = "rotateX(180deg)";
     })
+})
+
+body.addEventListener("keyup", () => {
+    body.style.backgroundColor = "yellow";
+    console.log('keyup'); 
 })
 
 const subHead2 = document.querySelectorAll("h2");
