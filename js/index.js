@@ -1,5 +1,11 @@
 // Your code goes here
-const mseWhl = document.getElementsByClassName("center");
+const body = document.querySelector("body");
+body.addEventListener("keydown", () => {
+    console.log("keydown");
+    body.style.backgroundColor = "darkgray";
+})
+
+
 window.addEventListener("wheel", () => {
     console.log("It works");
     // mseWhl.style.cursor = "not-allowed"; not working
@@ -29,3 +35,5 @@ links.forEach(link => {
         link.style.transform = "rotateX(180deg)";
     })
 })
+
+
