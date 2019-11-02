@@ -1,15 +1,27 @@
 // Your code goes here
 const body = document.querySelector("body");
+body.setAttribute.dragable = "true";
+
+body.addEventListener("drag", () => {
+    console.log("draggin");
+    body.style.cursor = "not-allowed";
+})
+
+body.addEventListener("ondrop", () => {
+    console.log("drop");
+    body.style.backgroundColor = "purple";
+})
+
 body.addEventListener("keydown", () => {
     console.log("keydown");
     body.style.backgroundColor = "darkgray";
 })
 
-
 window.addEventListener("wheel", () => {
     console.log("It works");
+    body.style.backgroundColor = "orange";
     // mseWhl.style.cursor = "not-allowed"; not working
-});
+})
 
 const pics = document.querySelectorAll("img");
 pics.forEach(pic => {
@@ -36,4 +48,18 @@ links.forEach(link => {
     })
 })
 
+const subHead2 = document.querySelectorAll("h2");
+subHead2.forEach(sub => {
+    sub.addEventListener("dblclick", () => {
+        sub.style.transition = "all 0.3s";
+        sub.style.transform = "rotateZ(45deg)";
+    })
+})
 
+const subHead4 = document.querySelectorAll("h4");
+subHead4.forEach(sub => {
+    sub.addEventListener("dblclick", () => {
+        sub.style.transition = "all 0.3s";
+        sub.style.transform = "rotateZ(360deg)";
+    })
+})
